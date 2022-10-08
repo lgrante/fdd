@@ -35,7 +35,6 @@ for i in "${!command_executables[@]}"; do
 	if [ "${executable_arg}" = "${i}" ]; then
 		arguments="${@:2}";
 
-		echo $arguments;
 		echo "~/.fdd/${command_executables[$i]} ${arguments}" | bash;
 	fi
 done
