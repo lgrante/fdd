@@ -1,7 +1,7 @@
 # fdd
 
 ```bash
-git clone git@github.com:lgrante/fdd.git
+git clone https://github.com/lgrante/fdd.git
 cd fdd/
 ./install.sh
 ```
