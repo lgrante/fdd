@@ -12,9 +12,8 @@ disk_name=$1;
 
 print_help() {
     echo -e "${bold}USAGE${normal}\n\n";
-    echo "rfdd [DISK_NAME]";
-    echo "rfdd [DISK_NAME] (--symlink | -sl) [SYMLINK_PATH]";
-    echo -e "rfdd (--help | -h)\n";
+    echo "fdd eject [DISK_NAME]";
+    echo -e "fdd eject (--help | -h)\n";
     exit;
 }
 
@@ -62,6 +61,8 @@ else
     echo -e "${blue}${bold}FLASH DISK SUCCESSFULLY UNMOUNTED${normal}";
     echo -e "${blue}${italic} - ${disk_name} is unmounted.${normal}";
 fi
+
+sudo eject /dev/$disk_name;
 
 delete_symlink_file;
 echo -ne '\n';

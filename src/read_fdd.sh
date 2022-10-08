@@ -14,9 +14,9 @@ symlink_path_value=$3;
 
 print_help() {
     echo -e "${bold}USAGE${normal}\n\n";
-    echo "rfdd [DISK_NAME]";
-    echo "rfdd [DISK_NAME] (--symlink | -sl) [SYMLINK_PATH]";
-    echo -e "rfdd (--help | -h)\n";
+    echo "fdd read [DISK_NAME]";
+    echo "fdd read [DISK_NAME] (--symlink | -sl) [SYMLINK_PATH]";
+    echo -e "fdd read (--help | -h)\n";
     exit;
 }
 
@@ -50,7 +50,7 @@ mount_point="/media/${disk_name}";
 
 if ! sudo mount /dev/$disk_name $mount_point; then
     echo -e "${red}${bold}FAILED TO MOUNT FLASH DISK${normal}";
-    echo -e "${red}${italic} - ${disk_name} not mounted"; 
+    echo -e "${red}${italic} - ${disk_name} not mounted\n"; 
     exit;
 fi
 
